@@ -201,7 +201,7 @@ public class page1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void signinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signinActionPerformed
-      
+            try{
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             String url="jdbc:sqlserver://localhost:1433;databaseName=master;user=sa;password=mini";
             Connection con = DriverManager.getConnection(url); 
@@ -223,9 +223,9 @@ public class page1 extends javax.swing.JFrame {
             }
             con.close();
          }
-    /*    catch(Exception e){
+       catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
-        }*/
+        }
     }//GEN-LAST:event_signinActionPerformed
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
